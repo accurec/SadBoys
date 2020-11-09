@@ -24,11 +24,14 @@ class InputAgent:
     def generate_test_input(self):
         self.movie_file_name = "assets/vids/HTF.mp4"
         self.music_file_name = "assets/music/Depression.mp3"
-        self.desired_duration = 90
+        self.overlay_video_clip_name = 'assets/overlayVids/OverlayVid1.mp4'
+        self.overlay_picture_name = 'assets/overlayPics/OverlayPic1.png'  
+        self.output_file_name = 'output/SadVideo.mp4'   
+        self.desired_duration = 60
         self.desired_minimum_cuts_length = 3
         self.desired_maximum_cuts_length = 4
-        self.offset_start = 10
-        self.offset_end = 50
+        self.offset_start = 24
+        self.offset_end = 17
         self.fadeInLevel = 50
         self.clip = mpe.VideoFileClip(self.movie_file_name)
         self.audio = mpe.AudioFileClip(self.music_file_name)   
@@ -36,6 +39,9 @@ class InputAgent:
     def gather_input_from_console(self):
         self.movie_file_name = input('Filename of movie?')
         self.music_file_name = input('Filename of music?')
+        self.overlay_video_clip_name = input('Filename of overlay video?')
+        self.overlay_picture_name = input('Filename of overlay picture?')
+        self.output_file_name = input('Output filename?')         
         self.desired_duration = int(input('Desired edit duration in seconds?'))
         self.desired_minimum_cuts_length = int(input('Desired minimum cuts length in seconds?'))
         self.desired_maximum_cuts_length = int(input('Desired maximum cuts length in seconds?'))
@@ -137,7 +143,7 @@ class VideoCreator:
             final_total_length += sequenceLength
             clip_number += 1
 
-        overlayClip = mpe.VideoFileClip('assets/overlayVids/OverlayVid1.mp4')
+        overlayClip = mpe.VideoFileClip(inputAgent.overlay_video_clip_name)
         overlayClips = []
         i = 1
 
@@ -152,24 +158,23 @@ class VideoCreator:
         # The composition is done here in this convoluted way, becasue for some reason it didn't work normally when I tried concatenate TextClip with VideoClips first and then place Overlay on top of all of them with CompositeVideoClip
         composedOverlayClip = mpe.CompositeVideoClip([finalSequenceClip, finalOverlayClip])
 
-        finalOverlayImage = mpe.ImageClip('assets/overlayPics/OverlayPic1.png').resize(clipSize).set_opacity(0.30).set_duration(final_total_length + textClipDuration)
+        finalOverlayImage = mpe.ImageClip(inputAgent.overlay_picture_name).resize(clipSize).set_opacity(0.30).set_duration(final_total_length + textClipDuration)
         finalAudio = mpafo.audio_fadeout(mpafi.audio_fadein(inputAgent.audio.set_duration(final_total_length + textClipDuration), audioFadeInOutInterval), audioFadeInOutInterval)
 
-        mpe.CompositeVideoClip([mpe.concatenate_videoclips([finalWordClip, composedOverlayClip]), finalOverlayImage]).set_audio(finalAudio).write_videofile('output/SadVideo.mp4', codec = "libx264", audio_codec = "aac")
+        mpe.CompositeVideoClip([mpe.concatenate_videoclips([finalWordClip, composedOverlayClip]), finalOverlayImage]).set_audio(finalAudio).write_videofile(inputAgent.output_file_name, codec = "libx264", audio_codec = "aac")
 
         # Have this here to avoid "OSError: [WinError 6] The handle is invalid" error at the end
         overlayClip.close()
 
 # Main
 seed(int(round(time.time() * 1000)))
-os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 inputAgent = InputAgent()
 inputAgent.generate_test_input()
 # inputAgent.gather_input_from_console() # Uncomment to provide your own input
 
 sequenceManager = SequenceManager()
-sequenceManager.generate_sequence(inputAgent, True, True)
+sequenceManager.generate_sequence(inputAgent, False, True)
 
 wordsGenerator = WordsGenerator()
 
