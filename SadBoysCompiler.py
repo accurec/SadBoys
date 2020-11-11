@@ -170,7 +170,7 @@ class VideoCreator:
 seed(int(round(time.time() * 1000)))
 
 inputAgent = InputAgent()
-inputAgent.generate_test_input()
+inputAgent.generate_test_input() # Uncomment to automatically populate the input and produce the result
 # inputAgent.gather_input_from_console() # Uncomment to provide your own input
 
 sequenceManager = SequenceManager()
