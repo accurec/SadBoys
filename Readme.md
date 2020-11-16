@@ -23,7 +23,7 @@ Components needed for the project to work:
     ```
     
 2) [ImageMagick](https://imagemagick.org/)
-3) _Optional_
+3) __Optional__
 Potentially you would need to configure Python to point to the proper ImageMagick .exe location. The config file to do this should be located in the following folder:
     ```{PathToPythonOnYourComputer}\Lib\site-packages\moviepy\config_defaults.py```
     
@@ -43,11 +43,11 @@ The ```assets``` folder include folders that contain files as follows:
 The ```output``` folder contains compiled video examples of the program execution (as of right now these are just first program iteration passes :smiley:). If User chose to do so then the subsequent compiled videos would go into the same folder (or they could choose another one).
 
 ### SadBoysCompiler code components
-```Sequence``` class -> this is a bulding block class that provides the information about the time in the original video where this subclip begins and where it ends
-```InputAgent``` class -> responsible for gathering all User input about original video file, music, overlay image/video, etc.
-```SequenceManager``` class -> responsible for generation of the collection (either shuffled or not) of ```Sequence``` class objects based on the original length of the video plus User inputs about desired total length, length of a single subclip, etc.
-```WordsGenerator``` class -> responsible for producing the word that is going to be used in the beginning of the final composed video clip
-```VideoCreator``` class -> responsible for doing the final video compilation using output of the ```SequenceManager```, User selected music, original video, overlay video and background image
+- ```Sequence``` class -> this is a bulding block class that provides the information about the time in the original video where this subclip begins and where it ends
+- ```InputAgent``` class -> responsible for gathering all User input about original video file, music, overlay image/video, etc.
+- ```SequenceManager``` class -> responsible for generation of the collection (either shuffled or not) of ```Sequence``` class objects based on the original length of the video plus User inputs about desired total length, length of a single subclip, etc.
+- ```WordsGenerator``` class -> responsible for producing the word that is going to be used in the beginning of the final composed video clip
+- ```VideoCreator``` class -> responsible for doing the final video compilation using output of the ```SequenceManager```, User selected music, original video, overlay video and background image
 
 ### Lessons learned (so far)
 Working on this project allowed me to code in Python using external video processing library, explore its capabilities and have a glimpse of what it has to offer. In addition to that I also used Visual Studio Code IDE and got familiar with it as well as explored how to use different extensions for it and debug a Python program.
