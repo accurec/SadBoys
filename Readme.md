@@ -10,19 +10,7 @@ For the input original video path, offsets from the beginning and the end (in ca
 
 Here is an example of what the input might look like and the produced output:
 
-![Example video input](./readme_images/input_video_example.gif)
-
-
-
-![Example overlay video](./readme_images/input_overlay_video_example.gif)
-
-
-
-![Example overlay background](./readme_images/video_overlay_background.png)
-
-
-
-![Example video output](./readme_images/output_video_example.gif)
+![Example video input](./readme_images/input_video_example.gif) + ![Example overlay video](./readme_images/input_overlay_video_example.gif) + ![Example overlay background](./readme_images/video_overlay_background.png) = ![Example video output](./readme_images/output_video_example.gif)
 
 ### Installation/Setup
 Components needed for the project to work:
