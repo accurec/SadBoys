@@ -8,9 +8,11 @@ For the input original video path, offsets from the beginning and the end (in ca
 
 ![Movie preview subclips diagram](./readme_images/movie_preview.png)
 
+Then after all the subclips are stitched together, the program uses the overlay background image and video to mix them ot top of the sequence. The chosen music is also replacing the original soundrack of the video. Additionally, at the beginning of the video we add randomly selected word from the list of predefined words to be used (after the word is being selected, it's being modified so that there are spaces between the letters).
+
 Here is an example of what the input might look like and the produced output:
 
-![Example video input](./readme_images/input_video_example.gif) + ![Example overlay video](./readme_images/input_overlay_video_example.gif) + ![Example overlay background](./readme_images/video_overlay_background.png) = ![Example video output](./readme_images/output_video_example.gif)
+![Example video input](./readme_images/input_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay video](./readme_images/input_overlay_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay background](./readme_images/video_overlay_background.png) ![Equals](./readme_images/equals_sign.png) ![Example video output](./readme_images/output_video_example.gif)
 
 ### Installation/Setup
 Components needed for the project to work:
