@@ -12,7 +12,7 @@ Then after all the subclips are stitched together, the program uses the overlay 
 
 Here is an example of what the input might look like and the produced output:
 
-![Example video input](./readme_images/input_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay video](./readme_images/input_overlay_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay background](./readme_images/video_overlay_background.png) ![Equals](./readme_images/equals_sign.png) ![Example video output](./readme_images/output_video_example.gif)
+<div style="align:center">![Example video input](./readme_images/input_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay video](./readme_images/input_overlay_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay background](./readme_images/video_overlay_background.png) ![Equals](./readme_images/equals_sign.png) ![Example video output](./readme_images/output_video_example.gif)</div>
 
 ### Installation/Setup
 Components needed for the project to work:
