@@ -49,7 +49,7 @@ The ```output``` folder contains compiled video examples of the program executio
 - ```WordsGenerator``` class -> responsible for producing the word that is going to be used in the beginning of the final composed video clip
 - ```VideoCreator``` class -> responsible for doing the final video compilation using output of the ```SequenceManager```, User selected music, original video, overlay video and background image
 
-### Lessons learned (so far)
+### Lessons learned
 Working on this project allowed me to code in Python using external video processing library, explore its capabilities and have a glimpse of what it has to offer. In addition to that I also used Visual Studio Code IDE and got familiar with it as well as explored how to use different extensions for it and debug a Python program.
 
 ### Future improvements
