@@ -6,10 +6,23 @@ Now I am not saying that I'm a sad person, I simply found the idea quite enterta
 ### Program execution flow
 For the input original video path, offsets from the beginning and the end (in case the video contains start or end credits), desired final video length and the desired min/max durations of the video chunks, the program takes uniformly distributed cuts (subclips) from the video and stitches them together in one final video clip (there is also an option to shuffle the subclips):
 
-![Movie Preview Subclips Diagram](./readme_images/movie_preview.png)
+![Movie preview subclips diagram](./readme_images/movie_preview.png)
 
 Here is an example of what the input might look like and the produced output:
 
+![Example video input](./readme_images/input_video_example.gif)
+
+
+
+![Example overlay video](./readme_images/input_overlay_video_example.gif)
+
+
+
+![Example overlay background](./readme_images/video_overlay_background.png)
+
+
+
+![Example video output](./readme_images/output_video_example.gif)
 
 ### Installation/Setup
 Components needed for the project to work:
