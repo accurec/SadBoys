@@ -31,7 +31,7 @@ Potentially you would need to configure Python to point to the proper ImageMagic
     ```IMAGEMAGICK_BINARY = os.getenv('IMAGEMAGICK_BINARY', 'C:\\Program Files\\ImageMagick-7.0.10-Q16-HDRI\\magick.exe')```
 
 ### Project components
-The ```root``` folder contains the main executable script __SadBoysCompiler__ that has all code of the project.
+The ```root``` folder contains the main executable script __SadBoysCompiler__ that has all code of the project. NOTE: there is only one code file in this project really. I realize it could be reorganized and refactored into multiple files each of which would have its own class/functionality. For the purpose of simplicity I decided to not do that here.
 The ```assets``` folder include folders that contain files as follows:
 
 - ```music``` -> folder contains music files that are going to be used as a soundtrack for the final compiled video

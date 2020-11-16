@@ -1,3 +1,7 @@
+# There is only one code file in this project really.
+# I realize it could be reorganized and refactored into multiple files each of which would have its own class/functionality.
+# For the purpose of simplicity I decided to not do that here.
+
 # Imports
 import os
 from random import shuffle
