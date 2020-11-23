@@ -2,7 +2,7 @@
 ### Table of contents
 - [Overview](#overview)
 - [Program Execution Flow](#program-execution-flow)
-- [Installation/Setup](#installation/setup)
+- [Installation and Setup](#installation-and-setup)
 - [Project Components](#project-components)
 - [SadBoysCompiler Code Components](#sadboyscompiler-code-components)
 - [Lessons Learned](#lessons-learned)
@@ -23,7 +23,7 @@ Here is an example of what the input might look like and the produced output:
 
 ![Example video input](./readme_images/input_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay video](./readme_images/input_overlay_video_example.gif) ![Plus](./readme_images/plus_sign.png) ![Example overlay background](./readme_images/video_overlay_background.png) ![Equals](./readme_images/equals_sign.png) ![Example video output](./readme_images/output_video_example.gif)
 
-### Installation/Setup
+### Installation and setup
 Components needed for the project to work:
 1) MoviePy -> can be installed by using the following command:
 
