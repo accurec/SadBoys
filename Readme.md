@@ -1,4 +1,7 @@
 # SadBoys
+- [Overview](#overview)
+- [Program Execution Flow](#program-execution-flow)
+
 ### Overview
 This is a fun project done in [Python](https://www.python.org/). The goal of this project is to compile nostalgic/sad type of videos from the video and music inputs that the User chooses. The ideal output would be something like [this video](https://www.youtube.com/watch?v=cFpekJ5h1XY&list=RDC02WOL9lLx8&index=4) or [this one](https://www.youtube.com/watch?v=M9Y2p5l6IWU&list=RDC02WOL9lLx8&index=36). There are quite a lot of videos like that on YouTube and apparently they are quite popular - they get millions of views :smiley: The project was very much inspired by the following YouTube [video](https://www.youtube.com/watch?v=EmZX9fgHoYk).
 While I am not into these kinds of videos myself, I simply found the idea quite entertaining and wanted to try coding the program myself using Python and to explore a little bit of its capabilities as well as get familiar with Visual Studio Code IDE :smiley:
